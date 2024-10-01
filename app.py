@@ -1,6 +1,5 @@
 import os
 from flask import Flask
-from pyrogram import Client, filters
 
 app = Flask(__name__)
 
@@ -9,5 +8,5 @@ def hello_world():
     return "Jai Shree Ram."
 
 if __name__ == "__main__":
-    bot.start()  # Start the bot
-    app.run(host='0.0.0.0', port=os.getenv("PORT", 8080))  # Flask app runs on this port
+    port = int(os.environ.get("PORT", 5000))  # Use the PORT environment variable Render provides
+    app.run(host="0.0.0.0", port=port)  # Host should be "0.0.0.0" to allow external access
