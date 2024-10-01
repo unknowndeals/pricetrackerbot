@@ -52,7 +52,7 @@ python main.py
 
 The fastest way to deploy the application is to click the **Deploy to Koyeb** button below.
 
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/nuhmanpk/PriceTrackerBot&branch=main&name=pricetrackerbot)
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/unknowndeals/Pricetrackerbot&branch=main&name=pricetrackerbot)
 
 ### Credits
 * Thanks to sannjayy for his Scraper [packages](https://github.com/sannjayy/python_flipkart_scraper)
