@@ -8,6 +8,7 @@ def hello_world():
     return "Jai Shree Ram."
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))  # Use the PORT environment variable Render provides
-    print(f"Starting Flask app on port {port}")
-    app.run(host="0.0.0.0", port=port)  # Host should be "0.0.0.0" to allow external access
+    # Get the PORT from the environment, default to 8000 if not set
+    port = int(os.environ.get("PORT", 8000))
+    app.run(host="0.0.0.0", port=port)  # Host should be "0.0.0.0"
+
