@@ -15,6 +15,7 @@ pyrofork
 pySocks
 python-dotenv
 pytz
+flask
 requests
 schedule
 soupsieve
