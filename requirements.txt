@@ -28,4 +28,4 @@ python-amazon-scraper
 gunicorn==20.1.0
 aiohttp==3.8.2
 werkzeug==2.0.2
-itsdangereous==2.0.1
+itsdangereous==2.2.0
