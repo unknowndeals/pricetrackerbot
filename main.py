@@ -393,21 +393,33 @@ async def delete_product(_, message: Message):
         logging.error(f"Error deleting product: {str(e)}")
         await status.edit("Failed to delete the product.")
 
+from aiohttp import web
+import asyncio
+
+# Define a simple health check endpoint
+async def handle(request):
+    return web.Response(text="Bot is running")
+
+async def start_web_server():
+    app = web.Application()
+    app.router.add_get('/', handle)
+    runner = web.AppRunner(app)
+    await runner.setup()
+    site = web.TCPSite(runner, '0.0.0.0', 8000)  # Listen on port 8000
+    await site.start()
+
 async def scheduled_check_prices():
     while True:
         await check_prices(app)  # Call `check_prices` periodically.
         await asyncio.sleep(600)  # Check prices every 10 minutes.
 
-
-
 def main():
     loop = asyncio.get_event_loop()  # Async event loop for scheduling tasks.
     loop.create_task(scheduled_check_prices())
+    loop.create_task(start_web_server())  # Start the dummy web server
     app.run()  # Runs the Telegram bot.
     print("Bot Running")
 
-
-
 if __name__ == "__main__":
+    main()
 
-  main()
