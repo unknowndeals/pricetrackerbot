@@ -26,6 +26,6 @@ tenacity
 python_flipkart_scraper
 python-amazon-scraper
 gunicorn==20.1.0
-aiohttp==3.8.2
+aiohttp
 werkzeug==2.0.2
 
