@@ -406,7 +406,3 @@ def main():
     app.run()  # Runs the Telegram bot.
     print("Bot Running")
 
-
-
-if __name__ == "__main__":
-    app.run()
